@@ -119,10 +119,9 @@ You'll need
 
 Just run this long command
 ```bash
-elixir elixir_to_C.exs >> c_to_rust.c && gcc c_to_rust.c -o c_to_rust && ./c_to_rust >> rust_to_elixir.rs && rustc rust_to_elixir.rs && ./rust_to_elixir >> copy.exs
-diff copy.exs elixir_to_C.exs
+sh run_it.sh
 ```
-This will make all the copies and show that the new file we make copy is the exact same as our original!
+This will make all the files and diff the copy with the original. Then if the diff is empty we will have a perfect transformation. The bash script will finally clean up all the files and you may comment out that line if you wish to see them.
 
 
 
